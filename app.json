@@ -1,5 +1,6 @@
 {
   "expo": {
+    "plugins": ["@react-native-google-signin/google-signin"],
     "name": "temp-converter",
     "slug": "temp-converter",
     "version": "1.0.0",
@@ -16,11 +17,13 @@
       "supportsTablet": true
     },
     "android": {
+      "googleServicesFile": "./android/app/google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.yahya080.tempconverter"
     },
     "web": {
       "favicon": "./assets/favicon.png"

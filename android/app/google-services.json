@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "326349318923",
+    "project_id": "temp-converter-fb8f1",
+    "storage_bucket": "temp-converter-fb8f1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326349318923:android:a3b2bb5edf0855b22bd00e",
+        "android_client_info": {
+          "package_name": "com.yahya080.tempconverter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3cqSSH_c5GwMVqTEBEcm4_-Xrsv9j7uA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
