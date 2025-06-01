@@ -1,94 +1,106 @@
-🌡️ Temp Converter App with Firebase Authentication
-A React Native mobile app that provides a simple temperature conversion tool with secure authentication features. This project uses Firebase for email/password and Google OAuth login, and is built with Expo and React Navigation.
+Temp Converter – React Native App with Firebase Authentication
+Temp Converter is a mobile app built with React Native and Expo that lets users securely register and log in using email/password or Google Sign-In. The main feature is a simple temperature conversion tool (Celsius ↔ Fahrenheit) wrapped in a smooth, user-friendly interface.
 
 🚀 Features
-🔐 Firebase Authentication
+User Authentication
 
-Email/password registration and login
+Email/password registration and login via Firebase Authentication
 
-Google Sign-In via Expo Auth Session (OAuth)
+Google OAuth Sign-In integrated using Expo Auth Session
 
-📱 React Native UI
+Navigation
 
-Clean, responsive interface
+React Navigation stack with Login, Register, and Main App screens
 
-Navigation stack with Login, Register, and Main App screens
+Cross-Platform
 
-🌐 Cross-platform Support
+Works on both Android and iOS using Expo managed workflow
 
-Works seamlessly on both Android and iOS (Expo-managed workflow)
+Error Handling
 
-📂 Project Structure
-bash
-Copy
-Edit
-.
-├── api/
-│   └── user.js         # Firebase authentication logic
-├── screens/
-│   ├── Login.js        # Login screen with email and Google sign-in
-│   ├── Register.js     # User registration screen
-│   └── TemperatureApp.js # Main app screen (not shown in this snippet)
-├── firebaseConfig.js   # Firebase initialization and config
-├── App.js              # Navigation setup
-└── ...
-🔧 Tech Stack
-React Native (Expo)
+Real-time validation and alerts for login and registration errors
 
-Firebase Authentication
+🛠 Technology Stack
+Frontend: React Native, Expo, React Navigation
 
-Google OAuth via Expo Auth Session
+Authentication: Firebase Authentication (Email/Password + Google OAuth)
 
-React Navigation (Native Stack)
+OAuth Handling: Expo Auth Session, WebBrowser for redirect management
 
-📝 Setup Instructions
-Clone the repo
+Backend: Firebase (serverless)
+
+📁 Project Setup
+Prerequisites
+Node.js and npm/yarn
+
+Expo CLI (npm install -g expo-cli)
+
+Firebase project with Authentication enabled (Email/Password + Google)
+
+Google Cloud Console OAuth client IDs configured
+
+Installation
+Clone the repo:
 
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/temp-converter-app.git
-cd temp-converter-app
-Install dependencies
+git clone https://github.com/yourusername/temp-converter.git
+cd temp-converter
+Install dependencies:
 
 bash
 Copy
 Edit
 npm install
-Start Expo server
+Update firebaseConfig.js with your Firebase credentials.
+
+Replace Google OAuth client IDs in api/user.js with your own.
+
+Start the app:
 
 bash
 Copy
 Edit
-npx expo start
+expo start
+Use Expo Go or emulator to run the app on your device.
+
+📐 Architecture
+API Layer (api/user.js)
+
+Handles Firebase authentication logic (email/password + Google Sign-In)
+
+Manages authentication errors and token handling
+
+Screens
+
+Login.js: Email login form + Google Sign-In button
+
+Register.js: New user registration with password confirmation
+
+TemperatureApp.js: Main app screen (temperature conversion UI)
+
+Navigation
+
+React Navigation stack managing screen flow
+
 Firebase Configuration
 
-Make sure you have a Firebase project set up. Update firebaseConfig.js with your Firebase credentials.
+firebaseConfig.js sets up Firebase SDK and exports auth instance
 
-🔐 Authentication Details
-Uses Firebase SDK for authentication
+📈 Project Status
+✅ Completed Features:
 
-Google Sign-In handled using expo-auth-session
+Full email/password registration and login with validation
 
-Automatically redirects and handles tokens using WebBrowser.maybeCompleteAuthSession()
+Google OAuth login integration with token handling
 
-📱 Screens Overview
-🔑 Login Screen
-Email/password form
+Basic temperature conversion app (main screen placeholder)
 
-Google Sign-In button
+Smooth navigation flow between login, register, and main app
 
-Link to Register
+Error alerts for common authentication failures
 
-📝 Register Screen
-Email/password form with confirmation
+🧪 Testing
+Manual testing performed on Android and iOS simulators and physical devices. Authentication flows and error states tested extensively.
 
-Validation and error handling
-
-🌡️ Temperature App
-Placeholder for your main app logic (e.g., convert temperatures between Celsius and Fahrenheit)
-
-⚠️ Notes
-Replace Google OAuth client IDs in user.js with your own from Google Cloud Console.
-
-For production, disable useProxy: true in makeRedirectUri() and set proper redirect URIs in Firebase and Google developer console.
