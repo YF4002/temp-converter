@@ -69,6 +69,7 @@ git clone https://github.com/yourusername/temp-converter.git
 cd temp-converter
 npm install
 expo start
+```
 
 ![Image](https://github.com/user-attachments/assets/32f7cdf8-57ec-450e-bff6-dc34c9b9a911)
 
